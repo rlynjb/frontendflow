@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+{% block head %}
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  {% if header.description %}
+  <meta name="description" content="{{ header.description }}">
+  {% else %}
+  <meta name="description" content="{{ site.description }}">
+  {% endif %}
+
+  {% if header.robots %}
+  <meta name="robots" content="{{ header.robots }}">
+  {% endif %}
+
+  <link rel="icon" type="image/png" href="{{ theme_url }}/images/favicon.png">
+
+  <title>{% if header.title %}{{ header.title }} | {% endif %} {{ site.title }}</title>
+
+  {% block stylesheets %}
+    {% do assets.add('theme://css/styles.css', 101) %}
+    {% do assets.add('theme://bower_components/font-awesome/css/font-awesome.min.css', 100) %}
+
+    {{ assets.css() }}
+  {% endblock stylesheets %}
+{% endblock head %}
+</head>
+
+<body>
+  <h1>kirby</h1>
+
+  {% block javascripts %}
+    {% do assets.add('theme://bower_components/jquery/dist/jquery.min.js', 101) %}
+    {% do assets.add('theme://bower_components/skrollr/dist/skrollr.min.js', 100) %}
+
+    {{ assets.js() }}
+  {% endblock javascripts %}
+</body>
+</html>

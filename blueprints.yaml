@@ -1,0 +1,8 @@
+name: Grav Theme Front-End Workflow
+version: 1.0.0
+description: "Custom Grav Theme with Front-End Workflow"
+author:
+  name: Rlyn Ben
+  url: https://github.com/rlynjb
+homepage: https://github.com/rlynjb/gravtheme-frontendflow.git
+bugs: https://github.com/rlynjb/gravtheme-frontendflow/issues
