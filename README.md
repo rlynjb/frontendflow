@@ -4,29 +4,29 @@ This contains a basic Grav theme setup with Front-End Workflow tools.
 
 -----
 
-### Installation
+# Installation
 
------
 
-### Updates:
 
-#### package.json
+# Updates:
+
+## package.json
 
 npmjs.com
 
------
 
-#### bower.json
+
+## bower.json
 
 - bower.io
 - javascripting.com
 
------
 
-#### gulp.js
 
------
+## gulp.js
 
-#### Grav core updates
+
+
+## Grav core updates
 
 getgrav.org
