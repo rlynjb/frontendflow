@@ -58,6 +58,23 @@ This holds how our Sass and JS files are built and deliver.
 
 # Installation
 
+**Requirements:**
+
+- Node
+- NPM or NVM if you deal with multiple node versions
+- A Grav install, duh :-p
+
+**Getting starting:**
+
+- `git clone` this repo inside of `/user/themes/` directory
+- inside of `/user/themes/gravtheme-frontendflow/` directory, run:
+  * `npm install -g`
+    * required to run Bower and Gulp
+  * `bower install`
+    * installs 3rd-party plugins used on this theme
+  * `gulp && gulp watch`
+    * builds our sass files. We've carefully chose each Foundation components to avoid CSS bloats and overriding of styles.
+
 -----
 
 # Updates
