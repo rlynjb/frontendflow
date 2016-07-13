@@ -15,6 +15,7 @@
   "dependencies": {
     "foundation-sites": "^6.2.3",
     "skrollr": "^0.6.30",
-    "font-awesome": "fontawesome#^4.6.3"
+    "font-awesome": "fontawesome#^4.6.3",
+    "smoothstate": "^0.7.2"
   }
 }

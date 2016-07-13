@@ -1,6 +1,6 @@
 //@import 'settings/settings'; // this is the original settings from foundation-sites
 @import 'foundation';
-@import 'custom_settings'; // this is copied over and overrides original settings
+@import 'foundation-settings'; // this is copied over and overrides original settings
 
 /*
   Below are copied from:
@@ -57,8 +57,3 @@
 @include foundation-float-classes;
 
 //@include foundation-flex-classes;
-
-/*
-  Has all custom styles for this project
-*/
-@import 'custom';
