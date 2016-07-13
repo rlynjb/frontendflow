@@ -5,10 +5,19 @@ This contains a basic Grav theme setup with Front-End Workflow tools.
 Directory Structure
 
 ```
-css
-images
-js
-templates
+css/
+  | custom.scss
+  | foundation-settings.scss
+  | foundation-includes.scss
+  | vendor.css
+  | custom.css
+images/
+  | favicon.png
+js/
+  | custom.js
+templates/
+  | partials/
+  | default.html.twig
 bower.json
 gulpfile.js
 package.json
