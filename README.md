@@ -18,10 +18,26 @@ js/
 templates/
   | partials/
   | default.html.twig
+.gitignore
+blueprints.yaml
 bower.json
+gravtheme-frontendflow.php
+gravtheme-frontendflow.yaml
 gulpfile.js
 package.json
 ```
+
+### css/
+
+### js/
+
+### templates/
+
+### bower.json
+
+### package.json
+
+### gulpfile.js
 
 -----
 
