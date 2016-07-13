@@ -2,7 +2,19 @@
 
 This contains a basic Grav theme setup with Front-End Workflow tools.
 
-Directory Structure
+**Contents**
+
+- Directory Structure and Files explained
+- Installation
+- Updates
+  * package.json
+  * bower.json
+  * gulp.js
+  * Grav core updates
+
+-----
+
+# Directory Structure and Files explains
 
 ```
 css/
