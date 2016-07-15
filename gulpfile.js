@@ -39,7 +39,7 @@ gulp.task('scripts', function() {
     './bower_components/foundation-sites/js/foundation.core.js',
     //'./bower_components/foundation-sites/js/foundation.util.box.js',
     //'./bower_components/foundation-sites/js/foundation.util.keyboard.js',
-    //'./bower_components/foundation-sites/js/foundation.util.mediaQuery.js',
+    './bower_components/foundation-sites/js/foundation.util.mediaQuery.js',
     //'./bower_components/foundation-sites/js/foundation.util.motion.js',
     //'./bower_components/foundation-sites/js/foundation.util.nest.js',
     //'./bower_components/foundation-sites/js/foundation.util.timerAndImageLoader.js',
@@ -57,7 +57,7 @@ gulp.task('scripts', function() {
     //'./bower_components/foundation-sites/js/foundation.offcanvas.js',
     //'./bower_components/foundation-sites/js/foundation.orbit.js',
     //'./bower_components/foundation-sites/js/foundation.responsiveMenu.js',
-    //'./bower_components/foundation-sites/js/foundation.responsiveToggle.js',
+    './bower_components/foundation-sites/js/foundation.responsiveToggle.js',
     //'./bower_components/foundation-sites/js/foundation.reveal.js',
     //'./bower_components/foundation-sites/js/foundation.slider.js',
     //'./bower_components/foundation-sites/js/foundation.sticky.js',
@@ -71,8 +71,20 @@ gulp.task('scripts', function() {
   .pipe(gulp.dest('./js'));
 });
 
+gulp.task('fonts', function() {
+  return gulp.src([
+    './bower_components/font-awesome/fonts/FontAwesome.otf',
+    './bower_components/font-awesome/fonts/fontawesome-webfont.eot',
+    './bower_components/font-awesome/fonts/fontawesome-webfont.svg',
+    './bower_components/font-awesome/fonts/fontawesome-webfont.ttf',
+    './bower_components/font-awesome/fonts/fontawesome-webfont.woff',
+    './bower_components/font-awesome/fonts/fontawesome-webfont.woff2'
+  ])
+  .pipe(gulp.dest('./fonts'));
+});
+
 gulp.task('watch', function() {
   gulp.watch('./css/*.scss', ['styles', 'scripts']);
 });
 
-gulp.task('default', ['styles', 'scripts']);
+gulp.task('default', ['styles', 'scripts', 'fonts']);
