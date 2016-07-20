@@ -85,7 +85,7 @@ gulp.task('fonts', function() {
 });
 
 gulp.task('watch', function() {
-  gulp.watch('./css/*.scss', ['styles', 'scripts']);
+  gulp.watch(['./css/*.scss', './js/custom.js'], ['styles', 'scripts']);
 });
 
 gulp.task('default', ['styles', 'scripts', 'fonts']);
