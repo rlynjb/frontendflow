@@ -36,10 +36,11 @@ gulp.task('styles', function() {
 gulp.task('scripts', function() {
   return gulp.src([
     './bower_components/jquery/dist/jquery.js',
+    './bower_components/smoothstate/src/jquery.smoothState.js',
     './bower_components/foundation-sites/js/foundation.core.js',
     //'./bower_components/foundation-sites/js/foundation.util.box.js',
     //'./bower_components/foundation-sites/js/foundation.util.keyboard.js',
-    './bower_components/foundation-sites/js/foundation.util.mediaQuery.js',
+    //'./bower_components/foundation-sites/js/foundation.util.mediaQuery.js',
     //'./bower_components/foundation-sites/js/foundation.util.motion.js',
     //'./bower_components/foundation-sites/js/foundation.util.nest.js',
     //'./bower_components/foundation-sites/js/foundation.util.timerAndImageLoader.js',
@@ -57,7 +58,7 @@ gulp.task('scripts', function() {
     //'./bower_components/foundation-sites/js/foundation.offcanvas.js',
     //'./bower_components/foundation-sites/js/foundation.orbit.js',
     //'./bower_components/foundation-sites/js/foundation.responsiveMenu.js',
-    './bower_components/foundation-sites/js/foundation.responsiveToggle.js',
+    //'./bower_components/foundation-sites/js/foundation.responsiveToggle.js',
     //'./bower_components/foundation-sites/js/foundation.reveal.js',
     //'./bower_components/foundation-sites/js/foundation.slider.js',
     //'./bower_components/foundation-sites/js/foundation.sticky.js',
