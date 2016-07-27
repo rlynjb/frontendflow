@@ -7,10 +7,10 @@ This contains a basic Grav theme setup with Front-End Workflow tools.
 - Directory Structure and Files explained
 - Installation
 - Updates
-  * package.json
-  * bower.json
-  * gulp.js
   * Grav core updates
+- Plugin resources
+  * NPM
+  * Bower
 
 -----
 
@@ -22,13 +22,14 @@ Contains a copy of **Zurb Foundation's** settings.scss file named `foundation-se
 
 `custom.scss` contains custom styles that will also override any styles from 3rd-party css styles. You can also use import or include to break your styles further and use `custom.scss` as a main file to arrange your styles. Refer to `gulpfile.js` to configure settings.
 
-`vendor.css` is generated from gulp.js. This contains Foundation styles and other 3rd-party css. To include new SCSS file or rearrange SCSS files in certain sequence, refer to `gulpfile.js`.
+`styles.css` is generated from gulp.js. This contains Foundation styles, other 3rd-party scss files, and `custom.scss` file. To include new SCSS file or rearrange SCSS files in certain sequence, refer to `gulpfile.js`.
 
-`custom.css` is pretty straight forward file. It's compiled verion of `custom.scss` file.
+`override-styles.css` file is considered a stylesheet for quick overrides done by designers and it does not require a Sass setup. This will contain minimal tweaks of structure, typography, skin.
 
 ### js/
 
-This directory is still in development. It contains a simple `custom.js` file which is also loaded on `default.html.twig` template. It does not use Gulp.js at the moment.
+`custom.js` file contains your Javascript and jQuery code. This file is added at the very bottom of `scripts.js` file after Zurb Foundation javascript components and other 3rd party javascript files. Check `gulpfile.js` file for which JS file to include on build and to reorder files.
+
 
 ### templates/
 
@@ -66,8 +67,9 @@ This holds how our Sass and JS files are built and deliver.
 
 **Getting starting:**
 
-- `git clone` this repo inside of `/user/themes/` directory
-- inside of `/user/themes/gravtheme-frontendflow/` directory, run:
+- `git clone` this repo in your root directory
+- `cp -R gravtheme-frontendflow/* grav-install/user/themes/your-theme-name/`
+- inside of `/user/themes/your-theme-name/` directory, run:
   * `npm install -g`
     * required to run Bower and Gulp
   * `bower install`
@@ -79,23 +81,35 @@ This holds how our Sass and JS files are built and deliver.
 
 # Updates
 
-## package.json
-
-npmjs.com
-
-
-
-## bower.json
-
-- bower.io
-- javascripting.com
-
-
-
-## gulp.js
-
-
-
 ## Grav core updates
 
-getgrav.org
+http://getgrav.org
+
+-----
+
+# Resources
+
+## npmjs.com - package.json
+
+To add npm modules, check out http://npmjs.com
+
+Run: `npm install module-name --save-dev`
+
+This theme only uses Bower and Gulp modules for build process.
+
+## bower.io - bower.json
+
+To add plugins, check out http://bower.io and http://javascripting.com for reference.
+
+To install from bower.io
+Run: `bower install --save plugin-name`
+
+To install from github
+Run: `bower install --save github-url`
+
+To install from github and specify a version
+Run: `bower install --save github-url#1.0.0`
+
+## After installing a plugin from Bower
+
+After installing a plugin from bower, make sure to update `gulpfile.js` so it will included on the build. Restart `gulp && gulp watch` as well.
