@@ -4,6 +4,7 @@ This contains a basic Grav theme setup with Front-End Workflow tools.
 
 **Contents**
 
+- Included Features and Tools
 - Directory Structure and Files explained
 - Installation
 - Updates
@@ -11,6 +12,69 @@ This contains a basic Grav theme setup with Front-End Workflow tools.
 - Plugin resources
   * NPM
   * Bower
+
+-----
+
+# Included Features and Tools
+
+## Application Tools - Framework
+
+- Zurb Foundation
+  * Doc: [http://foundation.zurb.com/sites/docs/](http://foundation.zurb.com/sites/docs/)
+  * Includes SASS and Javascript components install
+  * Uses `css/foundation-includes.scss` to neat-pick SASS components
+  * Uses `css/foundation-settings.scss` to customize global design
+  * Uses `gulpfile.js > var jsScripts > Zurb Foundation stuff` to neat-pick JS components 
+
+## Animation
+
+- SmoothState.js
+  * Doc: [https://github.com/miguel-perez/smoothState.js](https://github.com/miguel-perez/smoothState.js)
+  * Getting Started Basic Tutorial: [https://css-tricks.com/add-page-transitions-css-smoothstate-js/](https://css-tricks.com/add-page-transitions-css-smoothstate-js/)
+  * To include or exclude in build process (uncomment or comment the ff line of code):
+    * `gulpfile.js > var jsScripts > Animation`
+- Skrollr
+  * Doc: [https://github.com/Prinzhorn/skrollr](https://github.com/Prinzhorn/skrollr)
+  * To include or exclude in build process (uncomment or comment the ff line of code):
+    * `gulpfile.js > var jsScripts > Animation`
+
+## Icons
+
+- Fontawesome
+  * Doc: [http://fontawesome.io/icons/](http://fontawesome.io/icons/)
+  * To include or exclude in build process (uncomment or comment the ff line of code):
+    * `gulpfile.js > var fontIcons`
+    * `gulpfile.js > var sassFiles`
+    * `gulpfile.js > var sassSource`
+
+## DOM Framework
+
+For DOM manipulation, I've included 2 modes, **React.js mode** or **jQuery mode**.
+Reason for 2 DOM Framework is that sometimes, I needed something quick and I would use plain jQuery for simple websites.
+But for UI development, I would highly recommended React.js for its performance and elegant writing of code.
+
+- React.js
+  * Official Doc: [https://facebook.github.io/react/](https://facebook.github.io/react/)
+  * Learning Raw React.js [Learn Raw React — no JSX, no Flux, no ES6, no Webpack](http://jamesknelson.com/learn-raw-react-no-jsx-flux-es6-webpack/)
+  * More about React.js [The React.js Way: Getting Started Tutorial](https://blog.risingstack.com/the-react-way-getting-started-tutorial/)
+  * Getting Started Basic Tutorials and more [Build with React](http://buildwithreact.com/)
+  * Uses **JSX** as syntax aid when writing HTML markups on Javascript `*.jsx` files
+  * To include or exclude in build process (uncomment or comment the ff line of code):
+    * `gulpfile.js > var jsScripts > DOM`
+  * You would use `js/app.jsx` to write your code for React.js
+- jQuery
+  * Everybody knows jQuery :-p but here's a link [https://jquery.com/](https://jquery.com/)
+  * To include or exclude in build process (uncomment or comment the ff line of code):
+    * `gulpfile.js > var jsScripts > DOM`
+  * You would use `js/custom.js` to write your code for jQuery
+
+## Development Aid
+
+- Gulp.js
+  * Builds included SASS and JS files
+  * Dist files are: `css/styles.css`, `js/scripts.js`, `js/app.js`
+- Bower and NPM
+  * Installs all dependencies
 
 -----
 

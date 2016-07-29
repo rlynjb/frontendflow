@@ -97,7 +97,7 @@ gulp.task('fonts', function() {
 });
 
 gulp.task('watch', function() {
-  gulp.watch(['./css/*.scss', './js/custom.js'], ['styles', 'scripts']);
+  gulp.watch(['./css/*.scss', './js/custom.js', './js/app.jsx'], ['styles', 'scripts', 'app']);
 });
 
 gulp.task('default', ['styles', 'scripts', 'app', 'fonts']);
