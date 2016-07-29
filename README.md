@@ -22,6 +22,7 @@ This contains a basic Grav theme setup with Front-End Workflow tools.
 - Zurb Foundation
   * Doc: [http://foundation.zurb.com/sites/docs/](http://foundation.zurb.com/sites/docs/)
   * Includes SASS and Javascript components install
+  * For a list of all components: [http://foundation.zurb.com/sites/docs/kitchen-sink.html](http://foundation.zurb.com/sites/docs/kitchen-sink.html)
   * Uses `css/foundation-includes.scss` to neat-pick SASS components
   * Uses `css/foundation-settings.scss` to customize global design
   * Uses `gulpfile.js > var jsScripts > Zurb Foundation stuff` to neat-pick JS components 
