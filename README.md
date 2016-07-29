@@ -1,6 +1,11 @@
-# Grav Theme - Front-End Flow starter kit
+# FrontEnd Flow
+### Base Theme
 
-This contains a basic Grav theme setup with Front-End Workflow tools.
+A bare-bone Front-End Workflow theme with all tested goodies.
+Includes the tools, assets, sources you need to get started with protoyping your app or website.
+I created this theme to accomodate my Front-End workflow. Feel free to use it as well. I am just sharing my workflow here.
+
+-----
 
 **Contents**
 
