@@ -5,6 +5,11 @@ This contains a basic Grav theme setup with Front-End Workflow tools.
 **Contents**
 
 - [Included Features and Tools](#included-features-and-tools)
+  * Application Tools - Framework
+  * Animation
+  * Icons
+  * DOM Framework
+  * Development Aid
 - [Directory Structure and Files explained](#directory-structure-and-files-explained)
   * Front-End assets
   * Grav Templating
