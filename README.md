@@ -4,12 +4,12 @@ This contains a basic Grav theme setup with Front-End Workflow tools.
 
 **Contents**
 
-- Included Features and Tools
-- Directory Structure and Files explained
-- Installation
-- Updates
+- [Included Features and Tools](#included-features-and-tools)
+- [Directory Structure and Files explained](#directory-structure-and-files-explained)
+- [Installation](#installation)
+- [Updates](#updates)
   * Grav core updates
-- Plugin resources
+- [Resources](#resources)
   * NPM
   * Bower
 
