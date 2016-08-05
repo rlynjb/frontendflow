@@ -20,9 +20,10 @@ var jsScripts = [
   //'./bower_components/jquery/dist/jquery.js',
 
   /* Animation */
-  //./bower_components/smoothstate/src/jquery.smoothState.js',
+  //./bower_components/smoothstate/src/jquery.smoothState.js', // requires jQuery
+  //./bower_components/smooth-scroll.js/dist/js/smooth-scroll.min.js',
 
-  /* Zurb Foundation stuff */
+  /* Zurb Foundation stuff - requires jQuery */
   //'./bower_components/foundation-sites/js/foundation.core.js',
   //'./bower_components/foundation-sites/js/foundation.util.box.js',
   //'./bower_components/foundation-sites/js/foundation.util.keyboard.js',

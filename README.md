@@ -51,6 +51,10 @@ I created this theme to accomodate my Front-End workflow. Feel free to use it as
   * Doc: [https://github.com/Prinzhorn/skrollr](https://github.com/Prinzhorn/skrollr)
   * To include or exclude in build process (uncomment or comment the ff line of code):
     * `gulpfile.js > var jsScripts > Animation`
+- Smooth Scroll
+  * Doc: [https://github.com/cferdinandi/smooth-scroll](https://github.com/cferdinandi/smooth-scroll)
+  * To include or exclude in build process (uncomment or comment the ff line of code):
+    * `gulpfile.js > var jsScripts > Animation`
 
 ## Icons
 

@@ -17,6 +17,7 @@
     "skrollr": "^0.6.30",
     "font-awesome": "fontawesome#^4.6.3",
     "smoothstate": "^0.7.2",
-    "react": "^15.2.1"
+    "react": "^15.2.1",
+    "smooth-scroll.js": "^9.1.4"
   }
 }
