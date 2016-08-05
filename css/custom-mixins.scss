@@ -1,0 +1,10 @@
+/* My custom Mixins */
+$base: 16;
+
+@function pxtoem($target) {
+  @return ($target / $base) + 0em;
+}
+
+@function pxtopercent($target) {
+  @return (($target / $base) * 100) + 0%;
+}
