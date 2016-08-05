@@ -43,15 +43,21 @@ I created this theme to accomodate my Front-End workflow. Feel free to use it as
 ## Animation
 
 - SmoothState.js
+  * Implements CSS3 transitions/animations between page loads by hooking into element using class
+  * Vanilla JS
   * Doc: [https://github.com/miguel-perez/smoothState.js](https://github.com/miguel-perez/smoothState.js)
   * Getting Started Basic Tutorial: [https://css-tricks.com/add-page-transitions-css-smoothstate-js/](https://css-tricks.com/add-page-transitions-css-smoothstate-js/)
   * To include or exclude in build process (uncomment or comment the ff line of code):
     * `gulpfile.js > var jsScripts > Animation`
 - Skrollr
+  * Implements parallax by defining CSS3 animations and page scroll positions as element attribute
+  * Requires jQuery
   * Doc: [https://github.com/Prinzhorn/skrollr](https://github.com/Prinzhorn/skrollr)
   * To include or exclude in build process (uncomment or comment the ff line of code):
     * `gulpfile.js > var jsScripts > Animation`
 - Smooth Scroll
+  * Implements scroll animation on anchor tags
+  * Vanilla JS
   * Doc: [https://github.com/cferdinandi/smooth-scroll](https://github.com/cferdinandi/smooth-scroll)
   * To include or exclude in build process (uncomment or comment the ff line of code):
     * `gulpfile.js > var jsScripts > Animation`
