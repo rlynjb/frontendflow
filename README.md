@@ -5,6 +5,10 @@ A bare-bone Front-End Workflow theme with all tested goodies.
 Includes the tools, assets, sources you need to get started with protoyping your app or website.
 I created this theme to accomodate my Front-End workflow. Feel free to use it as well. I am just sharing my workflow here.
 
+### My Goal
+
+My goal is to create a Front-End Workflow that accomodates various templating engines for both Apps and CMS.
+
 -----
 
 **Contents**
@@ -19,6 +23,7 @@ I created this theme to accomodate my Front-End workflow. Feel free to use it as
   * Front-End assets
   * Grav Templating
   * Stand-alone Templating
+  * Magento 2 Layout and Templating
 - [Installation](#installation)
 - [Updates](#updates)
   * Grav core updates
@@ -142,6 +147,21 @@ Contains a copy of **Zurb Foundation's** settings.scss file named `foundation-se
 - `index.html`
   * This file is a barebone HTML file. It links to `images/`, `css/`, `js/` files.
 
+## Magento 2 Layout and Templating
+
+For Notes and instructions on how templating works on Magento 2 and how to get starting, visit my blog :-D [Wandrr.io - Getting started with Magento Theming](http://wandrr.io/Getting-started-with-Magento-Theming)
+
+- `composer.json`, `registration.php`, `theme.xml`
+  * Files that registers your theme to Magento 2 core engine
+- `web/`
+  * Compiled Stylesheets, Javascripts, Fonts from Front-End assets are dump unto this folder following Magento 2's theme directory structure.
+- `etc/`
+  * Contains an XML file that defines various image sizes used throughout the site
+- `media/`
+  * Contains images
+- `Magento_Theme`
+  * A Magento 2 module that we are extending and overriding to start theming the general components of a Magento website
+
 -----
 
 # Installation
@@ -150,27 +170,21 @@ Contains a copy of **Zurb Foundation's** settings.scss file named `foundation-se
 
 - Node
 - NPM or NVM if you deal with multiple node versions
-- A Grav install, duh :-p
+- and your CMS of choice
 
 **Getting starting:**
 
 - `git clone` this repo in your root directory
-- `cp -R gravtheme-frontendflow/* grav-install/user/themes/your-theme-name/`
-- inside of `/user/themes/your-theme-name/` directory, run:
+- `cp frontendflow/* <your/theme/path/>` - copy over CMS theme registration files
+- `cp -R frontendflow/* <your/theme/path/>` - copy over CMS templating files
+- `cp -R frontendflow/* <your/theme/path/>` - copy over Front-End assets
+- inside of `<your/theme/path/>` directory, run:
   * `npm install -g`
     * required to run Bower and Gulp
   * `bower install`
     * installs 3rd-party plugins used on this theme
   * `gulp && gulp watch`
-    * builds our sass files. We've carefully chose each Foundation components to avoid CSS bloats and overriding of styles.
-
------
-
-# Updates
-
-## Grav core updates
-
-http://getgrav.org
+    * builds our SASS and JS files
 
 -----
 

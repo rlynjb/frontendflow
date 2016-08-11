@@ -74,14 +74,20 @@ gulp.task('styles', function() {
     outputStyle: 'compressed'
   }))
   .pipe(concat('styles.css'))
-  .pipe(gulp.dest('./css'));
+  // Original path
+  .pipe(gulp.dest('./css'))
+  // Magento2 path
+  .pipe(gulp.dest('./web/css'));
 });
 
 gulp.task('scripts', function() {
   return gulp.src(jsScripts)
   .pipe(concat('scripts.js'))
   .pipe(strip())
-  .pipe(gulp.dest('./js'));
+  // Original path
+  .pipe(gulp.dest('./js'))
+  // Magento2 path
+  .pipe(gulp.dest('./web/js'));
 });
 
 gulp.task('app', function() {
@@ -89,13 +95,20 @@ gulp.task('app', function() {
   .pipe(babel({
     presets: ['react', 'es2015']
   }))
-  .pipe(gulp.dest('./js'));
+  // Original path
+  .pipe(gulp.dest('./js'))
+  // Magento2 path
+  .pipe(gulp.dest('./web/js'));
 });
 
 gulp.task('fonts', function() {
   return gulp.src(fontIcons)
-  .pipe(gulp.dest('./fonts'));
+  // Original path
+  .pipe(gulp.dest('./fonts'))
+  // Magento2 path
+  .pipe(gulp.dest('./web/fonts'));
 });
+
 
 gulp.task('watch', function() {
   gulp.watch(['./css/*.scss', './js/custom.js', './js/app.jsx'], ['styles', 'scripts', 'app']);
