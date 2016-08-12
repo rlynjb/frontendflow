@@ -6,22 +6,18 @@ var gulp = require('gulp'),
 
 // Source Files
 var sassFiles = [
-  './bower_components/font-awesome/scss/font-awesome.scss',
   './css/foundation-includes.scss'
 ]
 var sassSource = [
-  './bower_components/font-awesome/scss',
-  './bower_components/foundation-sites/scss'
+  './bower_components/motion-ui',
+  './bower_components/foundation-sites/scss',
+  './bower_components/font-awesome/scss'
 ]
 var jsScripts = [
   /* DOM */
   './bower_components/react/react.js',
   './bower_components/react/react-dom.js',
   //'./bower_components/jquery/dist/jquery.js',
-
-  /* Animation */
-  //./bower_components/smoothstate/src/jquery.smoothState.js', // requires jQuery
-  //./bower_components/smooth-scroll.js/dist/js/smooth-scroll.min.js',
 
   /* Zurb Foundation stuff - requires jQuery */
   //'./bower_components/foundation-sites/js/foundation.core.js',
@@ -52,6 +48,11 @@ var jsScripts = [
   //'./bower_components/foundation-sites/js/foundation.tabs.js',
   //'./bower_components/foundation-sites/js/foundation.toggler.js',
   //'./bower_components/foundation-sites/js/foundation.tooltip.js',
+  
+  /* Animation */
+  //./bower_components/smoothstate/src/jquery.smoothState.js', // requires jQuery
+  //./bower_components/smooth-scroll.js/dist/js/smooth-scroll.min.js',
+  //'./bower_components/motion-ui/dist/motion-ui.js',
 
   /* Your javascript file */
   './js/custom.js'
