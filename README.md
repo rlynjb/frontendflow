@@ -24,6 +24,7 @@ My goal is to create a Front-End Workflow that accomodates various templating en
   * Grav Templating
   * Stand-alone Templating
   * Magento 2 Layout and Templating
+  * Wordpress Templating
 - [Installation](#installation)
 - [Updates](#updates)
   * Grav core updates
@@ -161,6 +162,17 @@ For Notes and instructions on how templating works on Magento 2 and how to get s
   * Contains images
 - `Magento_Theme`
   * A Magento 2 module that we are extending and overriding to start theming the general components of a Magento website
+
+## Wordpress Templating
+
+To get started: [Anatomy of Wordpress Theme](https://codex.wordpress.org/Theme_Development#Anatomy_of_a_Theme)
+
+- `style.css`
+  * Required file. This file registers your theme to Wordpress core.
+- [Wordpress basic template files](https://codex.wordpress.org/Stepping_Into_Templates)
+  * Getting started with templating
+- `functions.php`
+  * Optional. Usually use to override functions from a parent theme or Wordpress core.
 
 -----
 
