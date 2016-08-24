@@ -51,7 +51,6 @@ var jsScripts = [
   
   /* Animation */
   //./bower_components/smoothstate/src/jquery.smoothState.js', // requires jQuery
-  //./bower_components/smooth-scroll.js/dist/js/smooth-scroll.min.js',
   //'./bower_components/motion-ui/dist/motion-ui.js',
 
   /* Your javascript file */
