@@ -23,7 +23,6 @@ My goal is to create a Front-End Workflow that accomodates various templating en
   * Front-End assets
   * Grav Templating
   * Stand-alone Templating
-  * Magento 2 Layout and Templating
   * Wordpress Templating
 - [Installation](#installation)
 - [Updates](#updates)
