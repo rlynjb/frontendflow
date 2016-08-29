@@ -23,6 +23,7 @@ My goal is to create a Front-End Workflow that accomodates various templating en
   * Front-End assets
   * Grav Templating
   * Stand-alone Templating
+  * Magento 2 Layout and Templating
   * Wordpress Templating
 - [Installation](#installation)
 - [Updates](#updates)
@@ -151,6 +152,8 @@ Contains a copy of **Zurb Foundation's** settings.scss file named `foundation-se
 
 For Notes and instructions on how templating works on Magento 2 and how to get starting, visit my blog :-D [Wandrr.io - Getting started with Magento Theming](http://wandrr.io/Getting-started-with-Magento-Theming)
 
+Its best to use Magento 2 Blank theme to avoid re-coding templates, javascripts, and other security issues that maybe involve in a Magento theme.
+
 - `composer.json`, `registration.php`, `theme.xml`
   * Files that registers your theme to Magento 2 core engine
 - `web/`
@@ -168,6 +171,7 @@ To get started: [Anatomy of Wordpress Theme](https://codex.wordpress.org/Theme_D
 
 - `style.css`
   * Required file. This file registers your theme to Wordpress core.
+  * Its better to copy a `style.css` file from another theme and replace data. This file is sensitive and involves file saving utf format and key values.
 - [Wordpress basic template files](https://codex.wordpress.org/Stepping_Into_Templates)
   * Getting started with templating
 - `functions.php`
