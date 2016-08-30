@@ -119,7 +119,7 @@ But for UI development, I would highly recommended React.js for its performance 
 - `gulpfile.js`
   * This holds how our Sass and JS files are built and deliver.
 
-### css/
+#### css/
 
 Contains a copy of **Zurb Foundation's** settings.scss file named `foundation-settings.scss` and a main scss file (`foundation-includes.scss`) that handles which component to include in build process.
 
@@ -129,7 +129,7 @@ Contains a copy of **Zurb Foundation's** settings.scss file named `foundation-se
 
 - `override-styles.css` file is considered a stylesheet for quick overrides done by designers and it does not require a Sass setup. This will contain minimal tweaks of structure, typography, skin.
 
-### js/
+#### js/
 
 - `custom.js` file contains your Javascript and jQuery code. This file is added at the very bottom of `scripts.js` file after Zurb Foundation javascript components and other 3rd party javascript files. Check `gulpfile.js` file for which JS file to include on build and to reorder files.
 
@@ -154,6 +154,17 @@ For Notes and instructions on how templating works on Magento 2 and how to get s
 
 Its best to use Magento 2 Blank theme to avoid re-coding templates, javascripts, and other security issues that maybe involve in a Magento theme.
 
+**Templating Method:**
+
+1. `git clone https://github.com/magento/magento2.git` in your root directory
+2. `cp -R magento2/app/design/frontend/Magento/blank/* <site_name>/app/design/frontend/<theme_name>/<subtheme_name>`
+3. Edit ff. files to replace default name to name of your theme. `composer.json`, `registration.php`, `theme.xml`
+4. Enable theme in Admin
+  * Check if theme is detected: `Content > Themes`
+  * Enable in: `Content > Configuration > Edit > Default Theme > Applied Theme`
+5. Copy layout or template folders from `magento2/app/code/Magento/<any_module_you_want>/view/frontend/layout && /templates`
+6. Place in `<site_name>/app/design/frontend/<theme_name>/<subtheme_name>/<any_module>/`
+
 - `composer.json`, `registration.php`, `theme.xml`
   * Files that registers your theme to Magento 2 core engine
 - `web/`
@@ -163,7 +174,10 @@ Its best to use Magento 2 Blank theme to avoid re-coding templates, javascripts,
 - `media/`
   * Contains images
 - `Magento_Theme`
-  * A Magento 2 module that we are extending and overriding to start theming the general components of a Magento website
+  * Holds general layout and templates throughout the site
+- `Magento_Cms`
+  * Holds the homepage layout and templates
+  * Disable Home page created in Content to make this Home template visible
 
 ## Wordpress Templating
 
