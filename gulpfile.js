@@ -82,6 +82,9 @@ gulp.task('styles', function() {
 
 gulp.task('scripts', function() {
   return gulp.src(jsScripts)
+  .pipe(babel({
+    presets:['es2015']
+  }))
   .pipe(concat('scripts.js'))
   .pipe(strip())
   // Original path
