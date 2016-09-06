@@ -1,0 +1,18 @@
+version: '2'
+services:
+# username: admin
+# password; J77l(Ie6@aDAsZD&aa
+
+  wordpress:
+    image: wordpress
+    volumes:
+      - ./wp-content/themes:/var/www/html/wp-content/themes
+    ports:
+      - 8080:80
+    environment:
+      WORDPRESS_DB_PASSWORD: example
+
+  mysql:
+    image: mariadb
+    environment:
+      MYSQL_ROOT_PASSWORD: example
