@@ -186,10 +186,11 @@ To get started: [Anatomy of Wordpress Theme](https://codex.wordpress.org/Theme_D
 - `style.css`
   * Required file. This file registers your theme to Wordpress core.
   * Its better to copy a `style.css` file from another theme and replace data. This file is sensitive and involves file saving utf format and key values.
+- `index.php`
+  * Main template file where you can start your HTML layout and prototype
 - [Wordpress basic template files](https://codex.wordpress.org/Stepping_Into_Templates)
   * Getting started with templating
-- `functions.php`
-  * Optional. Usually use to override functions from a parent theme or Wordpress core.
+- [Wordpress Template File list](https://codex.wordpress.org/Theme_Development#Template_Files_List)
 
 -----
 
