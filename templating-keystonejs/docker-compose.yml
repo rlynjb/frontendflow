@@ -1,0 +1,36 @@
+version: '2'
+services:
+  app:
+    # 1. get image
+    image: node:latest
+    # 2. mount host directory to container directory
+    volumes:
+      - ./:/usr/src/app/
+    # 3. run commands inside container
+    entrypoint:
+      - /bin/bash
+      - -c
+      - "cd /usr/src/app/ && npm install && node keystone.js"
+    # 4. link to database
+    links:
+      - db
+    # 5. set container environment variables
+    # research on how to look for db environemnt variables
+    # default is localhost but since were using a docker container
+    # we need to set db container info
+    environment:
+      - PORT=5000
+      - MONGO_URI=mongodb://mnmlist_db_1:27017
+    # 6. set port to expose on browser
+    ports:
+      - 5000:5000
+    expose:
+      - 5000
+
+  db:
+    image: mongo:latest
+    volumes:
+      - ./data/mongodb:/data/db
+    command: "--smallfiles --logpath=/dev/null"
+    ports:
+      - 27017:27017
