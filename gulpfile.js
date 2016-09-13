@@ -56,7 +56,9 @@ var jsScripts = [
   /* Your javascript file */
   './js/custom.js'
 ]
-var fontIcons = [
+var fonts = [
+  //'./bower_components/google-fonts/apache/<name_of_font>/*.ttf',
+  //'./bower_components/google-fonts/ofl/<name_of_font>/*.ttf',
   './bower_components/font-awesome/fonts/FontAwesome.otf',
   './bower_components/font-awesome/fonts/fontawesome-webfont.eot',
   './bower_components/font-awesome/fonts/fontawesome-webfont.svg',
@@ -105,7 +107,7 @@ gulp.task('app', function() {
 });
 
 gulp.task('fonts', function() {
-  return gulp.src(fontIcons)
+  return gulp.src(fonts)
   // Original path
   .pipe(gulp.dest('./fonts'))
   // Magento2 path
