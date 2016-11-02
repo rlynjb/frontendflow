@@ -25,6 +25,7 @@ My goal is to create a Front-End Workflow that accomodates various templating en
   * Stand-alone Templating
   * Magento 2 Layout and Templating
   * Wordpress Templating
+  * Laravel Templating
 - [Installation](#installation)
 - [Updates](#updates)
   * Grav core updates
