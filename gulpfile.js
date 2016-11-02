@@ -6,7 +6,11 @@ var gulp = require('gulp'),
 
 // Source Files
 var sassFiles = [
-  './css/foundation-includes.scss'
+  /* frontend flow - default path */
+  //'./css/foundation-includes.scss'
+
+  /* Laravel path */
+  './resources/assets/sass/foundation-includes.scss'
 ]
 var sassSource = [
   './bower_components/motion-ui',
@@ -15,9 +19,9 @@ var sassSource = [
 ]
 var jsScripts = [
   /* DOM */
-  './bower_components/react/react.js',
-  './bower_components/react/react-dom.js',
-  //'./bower_components/jquery/dist/jquery.js',
+  //'./bower_components/react/react.js',
+  //'./bower_components/react/react-dom.js',
+  './bower_components/jquery/dist/jquery.js',
 
   /* Zurb Foundation stuff - requires jQuery */
   //'./bower_components/foundation-sites/js/foundation.core.js',
@@ -54,7 +58,8 @@ var jsScripts = [
   //'./bower_components/motion-ui/dist/motion-ui.js',
 
   /* Your javascript file */
-  './js/custom.js'
+  //'./js/custom.js' // original path
+  './resources/assets/js/custom.js' // Laravel path
 ]
 var fonts = [
   //'./bower_components/google-fonts/apache/<name_of_font>/*.ttf',
@@ -76,10 +81,9 @@ gulp.task('styles', function() {
     outputStyle: 'compressed'
   }))
   .pipe(concat('styles.css'))
-  // Original path
-  .pipe(gulp.dest('./css'))
-  // Magento2 path
-  .pipe(gulp.dest('./web/css'));
+  //.pipe(gulp.dest('./css')); // Original path
+  //.pipe(gulp.dest('./web/css')); // Magento2 path
+  .pipe(gulp.dest('./public/css')); // Laravel path
 });
 
 gulp.task('scripts', function() {
@@ -89,10 +93,9 @@ gulp.task('scripts', function() {
   }))
   .pipe(concat('scripts.js'))
   .pipe(strip())
-  // Original path
-  .pipe(gulp.dest('./js'))
-  // Magento2 path
-  .pipe(gulp.dest('./web/js'));
+  //.pipe(gulp.dest('./js')); // Original path
+  //.pipe(gulp.dest('./web/js')); // Magento2 path
+  .pipe(gulp.dest('./public/js')); // Laravel path
 });
 
 gulp.task('app', function() {
@@ -100,23 +103,25 @@ gulp.task('app', function() {
   .pipe(babel({
     presets: ['react', 'es2015']
   }))
-  // Original path
-  .pipe(gulp.dest('./js'))
-  // Magento2 path
-  .pipe(gulp.dest('./web/js'));
+  //.pipe(gulp.dest('./js')); // Original path
+  //.pipe(gulp.dest('./web/js')); // Magento2 path
+  .pipe(gulp.dest('./public/js')); // Laravel path
 });
 
 gulp.task('fonts', function() {
   return gulp.src(fonts)
-  // Original path
-  .pipe(gulp.dest('./fonts'))
-  // Magento2 path
-  .pipe(gulp.dest('./web/fonts'));
+  //.pipe(gulp.dest('./fonts')); // Original path
+  //.pipe(gulp.dest('./web/fonts')); // Magento2 path
+  .pipe(gulp.dest('./public/fonts')); // Laravel path
 });
 
 
 gulp.task('watch', function() {
-  gulp.watch(['./css/*.scss', './js/custom.js', './js/app.jsx'], ['styles', 'scripts', 'app']);
+  /* Original path */
+  //gulp.watch(['./css/*.scss', './js/custom.js', './js/app.jsx'], ['styles', 'scripts', 'app']);
+  
+  /* Laravel Path */
+  gulp.watch(['./resources/assets/sass/*.scss', './resources/assets/js/custom.js', './resources/assets/js/app.jsx'], ['styles', 'scripts', 'app']);
 });
 
 gulp.task('default', ['styles', 'scripts', 'app', 'fonts']);
