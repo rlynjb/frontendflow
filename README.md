@@ -15,7 +15,6 @@ My goal is to create a Front-End Workflow that accomodates various templating en
 
 - [Included Features and Tools](#included-features-and-tools)
   * Application Tools - Framework
-  * Animation
   * Icons
   * DOM Framework
   * Development Aid
@@ -23,7 +22,6 @@ My goal is to create a Front-End Workflow that accomodates various templating en
   * Front-End assets
   * Grav Templating
   * Stand-alone Templating
-  * Magento 2 Layout and Templating
   * Wordpress Templating
   * Laravel Templating
 - [Installation](#installation)
@@ -46,28 +44,6 @@ My goal is to create a Front-End Workflow that accomodates various templating en
   * Uses `css/foundation-includes.scss` to neat-pick SASS components
   * Uses `css/foundation-settings.scss` to customize global design
   * Uses `gulpfile.js > var jsScripts > Zurb Foundation stuff` to neat-pick JS components 
-
-## Animation
-
-- SmoothState.js
-  * Implements CSS3 transitions/animations between page loads by hooking into element using class
-  * Vanilla JS
-  * Doc: [https://github.com/miguel-perez/smoothState.js](https://github.com/miguel-perez/smoothState.js)
-  * Getting Started Basic Tutorial: [https://css-tricks.com/add-page-transitions-css-smoothstate-js/](https://css-tricks.com/add-page-transitions-css-smoothstate-js/)
-  * To include or exclude in build process (uncomment or comment the ff line of code):
-    * `gulpfile.js > var jsScripts > Animation`
-- Skrollr
-  * Implements parallax by defining CSS3 animations and page scroll positions as element attribute
-  * Requires jQuery
-  * Doc: [https://github.com/Prinzhorn/skrollr](https://github.com/Prinzhorn/skrollr)
-  * To include or exclude in build process (uncomment or comment the ff line of code):
-    * `gulpfile.js > var jsScripts > Animation`
-- Smooth Scroll
-  * Implements scroll animation on anchor tags
-  * Vanilla JS
-  * Doc: [https://github.com/cferdinandi/smooth-scroll](https://github.com/cferdinandi/smooth-scroll)
-  * To include or exclude in build process (uncomment or comment the ff line of code):
-    * `gulpfile.js > var jsScripts > Animation`
 
 ## Icons
 
@@ -148,37 +124,6 @@ Contains a copy of **Zurb Foundation's** settings.scss file named `foundation-se
 
 - `index.html`
   * This file is a barebone HTML file. It links to `images/`, `css/`, `js/` files.
-
-## Magento 2 Layout and Templating
-
-For Notes and instructions on how templating works on Magento 2 and how to get starting, visit my blog :-D [Wandrr.io - Getting started with Magento Theming](http://wandrr.io/Getting-started-with-Magento-Theming)
-
-Its best to use Magento 2 Blank theme to avoid re-coding templates, javascripts, and other security issues that maybe involve in a Magento theme.
-
-**Templating Method:**
-
-1. `git clone https://github.com/magento/magento2.git` in your root directory
-2. `cp -R magento2/app/design/frontend/Magento/blank/* <site_name>/app/design/frontend/<theme_name>/<subtheme_name>`
-3. Edit ff. files to replace default name to name of your theme. `composer.json`, `registration.php`, `theme.xml`
-4. Enable theme in Admin
-  * Check if theme is detected: `Content > Themes`
-  * Enable in: `Content > Configuration > Edit > Default Theme > Applied Theme`
-5. Copy layout or template folders from `magento2/app/code/Magento/<any_module_you_want>/view/frontend/layout && /templates`
-6. Place in `<site_name>/app/design/frontend/<theme_name>/<subtheme_name>/<any_module>/`
-
-- `composer.json`, `registration.php`, `theme.xml`
-  * Files that registers your theme to Magento 2 core engine
-- `web/`
-  * Compiled Stylesheets, Javascripts, Fonts from Front-End assets are dump unto this folder following Magento 2's theme directory structure.
-- `etc/`
-  * Contains an XML file that defines various image sizes used throughout the site
-- `media/`
-  * Contains images
-- `Magento_Theme`
-  * Holds general layout and templates throughout the site
-- `Magento_Cms`
-  * Holds the homepage layout and templates
-  * Disable Home page created in Content to make this Home template visible
 
 ## Wordpress Templating
 
