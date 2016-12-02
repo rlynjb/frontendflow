@@ -2,6 +2,7 @@ var gulp = require('gulp'),
     sass = require('gulp-sass'),
     babel = require('gulp-babel'),
     concat = require('gulp-concat'),
+    uglify = require('gulp-uglify'),
     strip = require('gulp-strip-comments');
 
 // Source Files
@@ -93,6 +94,7 @@ gulp.task('scripts', function() {
   }))
   .pipe(concat('scripts.js'))
   .pipe(strip())
+  .pipe(uglify())
   //.pipe(gulp.dest('./js')); // Original path
   //.pipe(gulp.dest('./web/js')); // Magento2 path
   .pipe(gulp.dest('./public/js')); // Laravel path
