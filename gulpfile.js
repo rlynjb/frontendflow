@@ -5,86 +5,145 @@ var gulp = require('gulp'),
     uglify = require('gulp-uglify'),
     strip = require('gulp-strip-comments');
 
+
+// Active Path
+// original
+/*
+var activePath = {
+  "inputFiles": [
+    "./css/foundation-includes.scss",
+    "./js/custom.js"
+  ],
+  "outputFiles": [
+    "./css",
+    "./js",
+    "./fonts"
+  ]
+}
+*/
+
+// laravel
+/*
+var activePath = {
+  "inputFiles": [
+    "./resources/assets/sass/foundation-includes.scss",
+    "./resources/assets/js/custom.js",
+    "./resources/assets/js/app.jsx",
+    "./resources/assets/images/*"
+  ],
+  "outputFiles": [
+    "./public/css",
+    "./public/js",
+    "./public/fonts",
+    "./public/images"
+  ],
+  "watchFiles": [
+    './resources/assets/sass/*.scss',
+    './resources/assets/js/custom.js',
+    './resources/assets/js/app.jsx',
+    './resources/assets/images/*'
+  ],
+  "watchTasks": [
+    'styles',
+    'scripts',
+    'app',
+    'images'
+  ]
+}
+*/
+
+// public
+var activePath = {
+  "inputFiles": [
+    "./css/foundation-includes.scss",
+    "./js/custom.js",
+    "./js/app.jsx",
+    "./images/*"
+  ],
+  "outputFiles": [
+    "./public/css",
+    "./public/js",
+    "./public/fonts",
+    "./public/images"
+  ],
+  "watchFiles": [
+    './css/*.scss',
+    './js/custom.js',
+    './js/app.jsx',
+    './images/*'
+  ],
+  "watchTasks": [
+    'styles',
+    'scripts',
+    'app',
+    'images'
+  ]
+}
+
+
 // Source Files
-var sassFiles = [
-  /* frontend flow - default path */
-  //'./css/foundation-includes.scss'
-
-  /* Laravel path */
-  './resources/assets/sass/foundation-includes.scss'
-]
 var sassSource = [
-  './bower_components/motion-ui',
-  './bower_components/foundation-sites/scss',
-  './bower_components/font-awesome/scss'
+  './node_modules/foundation-sites/scss',
+  './node_modules/font-awesome/scss'
 ]
+
+var foundationJSPath = './node_modules/foundation-sites/js/';
 var jsScripts = [
-  /* DOM */
-  //'./bower_components/react/react.js',
-  //'./bower_components/react/react-dom.js',
-  './bower_components/jquery/dist/jquery.js',
+  //'./node_modules/react/react.js',
+  //'./node_modules/react/react-dom.js',
+  './node_modules/jquery/dist/jquery.js',
 
-  /* Zurb Foundation stuff - requires jQuery */
-  //'./bower_components/foundation-sites/js/foundation.core.js',
-  //'./bower_components/foundation-sites/js/foundation.util.box.js',
-  //'./bower_components/foundation-sites/js/foundation.util.keyboard.js',
-  //'./bower_components/foundation-sites/js/foundation.util.mediaQuery.js',
-  //'./bower_components/foundation-sites/js/foundation.util.motion.js',
-  //'./bower_components/foundation-sites/js/foundation.util.nest.js',
-  //'./bower_components/foundation-sites/js/foundation.util.timerAndImageLoader.js',
-  //'./bower_components/foundation-sites/js/foundation.util.touch.js',
-  //'./bower_components/foundation-sites/js/foundation.util.triggers.js',
-  //'./bower_components/foundation-sites/js/foundation.abide.js',
-  //'./bower_components/foundation-sites/js/foundation.accordion.js',
-  //'./bower_components/foundation-sites/js/foundation.accordionMenu.js',
-  //'./bower_components/foundation-sites/js/foundation.drilldown.js',
-  //'./bower_components/foundation-sites/js/foundation.dropdown.js',
-  //'./bower_components/foundation-sites/js/foundation.dropdownMenu.js',
-  //'./bower_components/foundation-sites/js/foundation.equalizer.js',
-  //'./bower_components/foundation-sites/js/foundation.interchange.js',
-  //'./bower_components/foundation-sites/js/foundation.magellan.js',
-  //'./bower_components/foundation-sites/js/foundation.offcanvas.js',
-  //'./bower_components/foundation-sites/js/foundation.orbit.js',
-  //'./bower_components/foundation-sites/js/foundation.responsiveMenu.js',
-  //'./bower_components/foundation-sites/js/foundation.responsiveToggle.js',
-  //'./bower_components/foundation-sites/js/foundation.reveal.js',
-  //'./bower_components/foundation-sites/js/foundation.slider.js',
-  //'./bower_components/foundation-sites/js/foundation.sticky.js',
-  //'./bower_components/foundation-sites/js/foundation.tabs.js',
-  //'./bower_components/foundation-sites/js/foundation.toggler.js',
-  //'./bower_components/foundation-sites/js/foundation.tooltip.js',
+  //foundationJSPath + 'foundation.core.js',
+  //foundationJSPath + 'foundation.util.box.js',
+  //foundationJSPath + 'foundation.util.keyboard.js',
+  //foundationJSPath + 'foundation.util.mediaQuery.js',
+  //foundationJSPath + 'foundation.util.motion.js',
+  //foundationJSPath + 'foundation.util.nest.js',
+  //foundationJSPath + 'foundation.util.timerAndImageLoader.js',
+  //foundationJSPath + 'foundation.util.touch.js',
+  //foundationJSPath + 'foundation.util.triggers.js',
+  //foundationJSPath + 'foundation.abide.js',
+  //foundationJSPath + 'foundation.accordion.js',
+  //foundationJSPath + 'foundation.accordionMenu.js',
+  //foundationJSPath + 'foundation.drilldown.js',
+  //foundationJSPath + 'foundation.dropdown.js',
+  //foundationJSPath + 'foundation.dropdownMenu.js',
+  //foundationJSPath + 'foundation.equalizer.js',
+  //foundationJSPath + 'foundation.interchange.js',
+  //foundationJSPath + 'foundation.magellan.js',
+  //foundationJSPath + 'foundation.offcanvas.js',
+  //foundationJSPath + 'foundation.orbit.js',
+  //foundationJSPath + 'foundation.responsiveMenu.js',
+  //foundationJSPath + 'foundation.responsiveToggle.js',
+  //foundationJSPath + 'foundation.reveal.js',
+  //foundationJSPath + 'foundation.slider.js',
+  //foundationJSPath + 'foundation.sticky.js',
+  //foundationJSPath + 'foundation.tabs.js',
+  //foundationJSPath + 'foundation.toggler.js',
+  //foundationJSPath + 'foundation.tooltip.js',
   
-  /* Animation */
-  //./bower_components/smoothstate/src/jquery.smoothState.js', // requires jQuery
-  //'./bower_components/motion-ui/dist/motion-ui.js',
+  //./node_modules/smoothstate/src/jquery.smoothState.js', // Animation - requires jQuery
 
-  /* Your javascript file */
-  //'./js/custom.js' // original path
-  './resources/assets/js/custom.js' // Laravel path
+  activePath.inputFiles[1]
 ]
+
 var fonts = [
-  //'./bower_components/google-fonts/apache/<name_of_font>/*.ttf',
-  //'./bower_components/google-fonts/ofl/<name_of_font>/*.ttf',
-  './bower_components/font-awesome/fonts/FontAwesome.otf',
-  './bower_components/font-awesome/fonts/fontawesome-webfont.eot',
-  './bower_components/font-awesome/fonts/fontawesome-webfont.svg',
-  './bower_components/font-awesome/fonts/fontawesome-webfont.ttf',
-  './bower_components/font-awesome/fonts/fontawesome-webfont.woff',
-  './bower_components/font-awesome/fonts/fontawesome-webfont.woff2'
+  //'./node_modules/google-fonts/apache/<name_of_font>/*.ttf',
+  //'./node_modules/google-fonts/ofl/<name_of_font>/*.ttf',
+  './node_modules/font-awesome/fonts/*'
 ]
 
+// =======================================================================
 
 // Build Process
 gulp.task('styles', function() {
-  return gulp.src(sassFiles)
+  return gulp.src( activePath.inputFiles[0] )
   .pipe(sass({
     includePaths: sassSource,
     outputStyle: 'compressed'
   }))
   .pipe(concat('styles.css'))
-  //.pipe(gulp.dest('./css')); // Original path
-  //.pipe(gulp.dest('./web/css')); // Magento2 path
-  .pipe(gulp.dest('./public/css')); // Laravel path
+  .pipe(gulp.dest( activePath.outputFiles[0] ));
 });
 
 gulp.task('scripts', function() {
@@ -95,35 +154,29 @@ gulp.task('scripts', function() {
   .pipe(concat('scripts.js'))
   .pipe(strip())
   .pipe(uglify())
-  //.pipe(gulp.dest('./js')); // Original path
-  //.pipe(gulp.dest('./web/js')); // Magento2 path
-  .pipe(gulp.dest('./public/js')); // Laravel path
+  .pipe(gulp.dest( activePath.outputFiles[1] ));
 });
 
 gulp.task('app', function() {
-  return gulp.src('./js/app.jsx')
+  return gulp.src( activePath.inputFiles[2] )
   .pipe(babel({
     presets: ['react', 'es2015']
   }))
-  //.pipe(gulp.dest('./js')); // Original path
-  //.pipe(gulp.dest('./web/js')); // Magento2 path
-  .pipe(gulp.dest('./public/js')); // Laravel path
+  .pipe(gulp.dest( activePath.outputFiles[1] ));
 });
 
 gulp.task('fonts', function() {
   return gulp.src(fonts)
-  //.pipe(gulp.dest('./fonts')); // Original path
-  //.pipe(gulp.dest('./web/fonts')); // Magento2 path
-  .pipe(gulp.dest('./public/fonts')); // Laravel path
+  .pipe(gulp.dest( activePath.outputFiles[2] ));
 });
 
+gulp.task('images', function() {
+  return gulp.src( activePath.inputFiles[3] )
+  .pipe(gulp.dest( activePath.outputFiles[3] ));
+});
 
 gulp.task('watch', function() {
-  /* Original path */
-  //gulp.watch(['./css/*.scss', './js/custom.js', './js/app.jsx'], ['styles', 'scripts', 'app']);
-  
-  /* Laravel Path */
-  gulp.watch(['./resources/assets/sass/*.scss', './resources/assets/js/custom.js', './resources/assets/js/app.jsx'], ['styles', 'scripts', 'app']);
+  gulp.watch( activePath.watchFiles, activePath.watchTasks );
 });
 
-gulp.task('default', ['styles', 'scripts', 'app', 'fonts']);
+gulp.task('default', ['styles', 'scripts', 'app', 'fonts', 'images']);

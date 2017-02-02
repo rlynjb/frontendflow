@@ -1,5 +1,10 @@
 $(function() {
-  $(document).foundation();
+  //$(document).foundation();
+
+  /*
+    Check if element is visible in viewport
+    ref: http://stackoverflow.com/questions/20791374/jquery-check-if-element-is-visible-in-viewport
+  */
 
 
   /*
@@ -7,9 +12,7 @@ $(function() {
     - send data and pull data to display
     - php form inteferance
   */
-  /*
-    Contact Form ajax
-  */
+  // Contact Form ajax
   $('#contact-form')
   .on('submit', function(e) {
     e.preventDefault();
@@ -33,6 +36,7 @@ $(function() {
       }
     });
   });// end - on click
+
 
   /*
     Anchorless Page Scroll
@@ -100,4 +104,5 @@ $(function() {
       return false;
     }
   }
+
 });
