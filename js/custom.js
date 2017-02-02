@@ -54,7 +54,14 @@ $(function() {
   var videoModal = $('#videoModal iframe');
   var videoSrc = videoModal.attr('src');
 
+  // when user clicks on close btn
   $('#videoModal .close-button').click(function() {
+    videoModal.attr('src', '');
+    videoModal.attr('src', videoSrc);
+  });
+
+  // when user clicks on modal background
+  $('#videoModal').on('closed.zf.reveal', function() {
     videoModal.attr('src', '');
     videoModal.attr('src', videoSrc);
   });
