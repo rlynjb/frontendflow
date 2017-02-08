@@ -5,7 +5,6 @@ var gulp = require('gulp'),
     uglify = require('gulp-uglify'),
     strip = require('gulp-strip-comments');
 
-
 // Active Path
 // original
 /*
@@ -89,9 +88,9 @@ var sassSource = [
 
 var foundationJSPath = './node_modules/foundation-sites/js/';
 var jsScripts = [
-  //'./node_modules/react/react.js',
-  //'./node_modules/react/react-dom.js',
-  './node_modules/jquery/dist/jquery.js',
+  './node_modules/react/dist/react.min.js',
+  './node_modules/react-dom/dist/react-dom.min.js',
+  //'./node_modules/jquery/dist/jquery.js',
 
   //foundationJSPath + 'foundation.core.js',
   //foundationJSPath + 'foundation.util.box.js',

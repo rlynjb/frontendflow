@@ -1,4 +1,4 @@
-$(function() {
+//$(function() {
   //$(document).foundation();
 
   /*
@@ -13,6 +13,7 @@ $(function() {
     - php form inteferance
   */
   // Contact Form ajax
+  /*
   $('#contact-form')
   .on('submit', function(e) {
     e.preventDefault();
@@ -35,7 +36,7 @@ $(function() {
         $('.error-message').show();
       }
     });
-  });// end - on click
+  });*/// end - on click
 
 
   /*
@@ -43,6 +44,7 @@ $(function() {
     ref: http://jsfiddle.net/BjpWB/4/
     HTML syntax: <a name="id5"/>
   */
+  /*
   function scrollToAnchor(aid){
     var aTag = $("a[name='"+ aid +"']");
     $('html,body').animate({scrollTop: aTag.offset().top},'slow');
@@ -50,11 +52,13 @@ $(function() {
   $("#link").click(function() {
     scrollToAnchor('id3');
   });
+  */
 
 
   /*
     Stops vimeo video when modal is closed
   */
+  /*
   var videoModal = $('#videoModal iframe');
   var videoSrc = videoModal.attr('src');
 
@@ -69,17 +73,20 @@ $(function() {
     videoModal.attr('src', '');
     videoModal.attr('src', videoSrc);
   });
+  */
 
 
   /*
     Use window resize for realtime viewport detection
     Disable detail modal on medium and up window screen
   */
+  /*
   $(window).resize(function() {
     if( $(this).width() > 639 && $('#detailModal[aria-hidden="false"]') ) {
       $('#detailModal').foundation('close');
     }
   });
+  */
 
 
   /*
@@ -87,6 +94,7 @@ $(function() {
     ref: http://foundation.zurb.com/forum/posts/1967-abide-validation-on-checkbox-doesnt-group
     ref: http://stackoverflow.com/questions/26890023/display-error-if-no-checkbox-is-checked-in-checkbox-group
   */
+  /*
   Foundation.Abide.defaults.validators['checkbox_limit'] = function($el, required, parent) {
     var group = parent.closest('.checkbox-group'),
         max = group.attr('data-checkbox-validator-max'),
@@ -104,5 +112,6 @@ $(function() {
       return false;
     }
   }
+  */
 
-});
+//});

@@ -8,3 +8,27 @@ $base: 16;
 @function pxtopercent($target) {
   @return (($target / $base) * 100) + 0%;
 }
+
+
+/*
+  Modularize set of CSS styles in a SASS mixin:
+  to define:
+  @mixin functionName() {
+    
+  }
+
+  to include in an element:
+  @include functionName();
+*/
+
+
+/*
+  Fix for Select dropdown arrow IE issue
+  ref: http://stackoverflow.com/questions/32870788/css-using-raw-svg-in-the-url-parameter-of-a-background-image-in-ie
+
+  1. Change the data type from data:image/svg+xml;utf8 to data:image/svg+xml;charset=utf8 (i.e., charset= is required)
+  2. URL encode the svg. To minimize the URL-encoding, use ' instead of " to enclose the attributes. So, in my case, only the < and > needed to be encoded.
+
+  To, ultimately, my CSS looked like this:
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' style='fill:red; stroke:none' %3E%3Crect x='0' y='40' width='100' height='20' /%3E%3Crect x='40' y='0' width='20' height='100' /%3E%3C/svg%3E");
+*/
