@@ -2,6 +2,14 @@
   //$(document).foundation();
 
   /*
+    Regex to get string bet strings
+    ref:
+    http://stackoverflow.com/questions/413071/regex-to-get-string-between-curly-braces-i-want-whats-between-the-curly-brace
+
+    ([^{]*?)(?=\})
+  */
+
+  /*
     Check if element is visible in viewport
     ref: http://stackoverflow.com/questions/20791374/jquery-check-if-element-is-visible-in-viewport
   */
