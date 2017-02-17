@@ -10,6 +10,7 @@ $base: 16;
 }
 
 
+
 /*
   Modularize set of CSS styles in a SASS mixin:
   to define:
@@ -20,6 +21,7 @@ $base: 16;
   to include in an element:
   @include functionName();
 */
+
 
 
 /*
@@ -33,24 +35,46 @@ $base: 16;
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' style='fill:red; stroke:none' %3E%3Crect x='0' y='40' width='100' height='20' /%3E%3Crect x='40' y='0' width='20' height='100' /%3E%3C/svg%3E");
 */
 
+
+
 /*
   Set of placeholder compability
   ref: https://css-tricks.com/almanac/selectors/p/placeholder/
 
-      &::-webkit-input-placeholder {
-          color: $white;
-      }// end
+  ex:
+  &::-webkit-input-placeholder {
+      color: $white;
+  }// end
 
-      &:-moz-placeholder {
-          color: $white;
-      }// end
+  &:-moz-placeholder {
+      color: $white;
+  }// end
 
-      &::-moz-placeholder {
-          color: $white;
-      }// end
+  &::-moz-placeholder {
+      color: $white;
+  }// end
 
-      &:-ms-input-placeholder {
-          color: $white;
-      }// end
+  &:-ms-input-placeholder {
+      color: $white;
+  }// end
+
+*/
+
+
+
+/*
+  CSS3 selector wildcard
+  ref: http://bearwavetech.com/waveblog/2013/03/04/css3-selectors-with-wildcards/
+
+  ex:
+  .reveal {
+    &[id^="photo"] {
+      padding-top: 3em;
+    }
+
+    &[id*=" photo"] {
+      padding-top: 3em;
+    }
+  }
 
 */
