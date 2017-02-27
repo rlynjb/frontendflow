@@ -25,7 +25,7 @@ var activePath = {
 /*
 var activePath = {
   "inputFiles": [
-    "./resources/assets/sass/foundation-includes.scss",
+    "./resources/assets/css/foundation-includes.scss",
     "./resources/assets/js/custom.js",
     "./resources/assets/js/app.jsx",
     "./resources/assets/images/*"
@@ -37,7 +37,7 @@ var activePath = {
     "./public/images"
   ],
   "watchFiles": [
-    './resources/assets/sass/*.scss',
+    './resources/assets/css/*.scss',
     './resources/assets/js/custom.js',
     './resources/assets/js/app.jsx',
     './resources/assets/images/*'
