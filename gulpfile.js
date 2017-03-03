@@ -1,9 +1,12 @@
 var gulp = require('gulp'),
     sass = require('gulp-sass'),
     babel = require('gulp-babel'),
+    babelify = require('babelify'),
     concat = require('gulp-concat'),
     uglify = require('gulp-uglify'),
-    strip = require('gulp-strip-comments');
+    strip = require('gulp-strip-comments'),
+    browserify = require('browserify'),
+    source = require('vinyl-source-stream');
 
 // Active Path
 // original
@@ -68,7 +71,7 @@ var activePath = {
   "watchFiles": [
     './css/*.scss',
     './js/custom.js',
-    './js/app.jsx',
+    './js/*.jsx',
     './images/*'
   ],
   "watchTasks": [
@@ -157,11 +160,16 @@ gulp.task('scripts', function() {
 });
 
 gulp.task('app', function() {
-  return gulp.src( activePath.inputFiles[2] )
-  .pipe(babel({
+  return browserify({
+    entries: activePath.inputFiles[2],
+    debug: true
+  })
+  .transform(babelify.configure({
     presets: ['react', 'es2015']
   }))
-  .pipe(gulp.dest( activePath.outputFiles[1] ));
+  .bundle()
+  .pipe(source('app.js'))
+  .pipe(gulp.dest(activePath.outputFiles[1]));
 });
 
 gulp.task('fonts', function() {
