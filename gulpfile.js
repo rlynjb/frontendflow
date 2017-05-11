@@ -6,7 +6,8 @@ var gulp = require('gulp'),
     uglify = require('gulp-uglify'),
     strip = require('gulp-strip-comments'),
     browserify = require('browserify'),
-    source = require('vinyl-source-stream');
+    source = require('vinyl-source-stream'),
+    googleFonts = require('gulp-google-fonts');
 
 // Active Path
 // original
@@ -130,8 +131,6 @@ var jsScripts = [
 ]
 
 var fonts = [
-  //'./node_modules/google-fonts/apache/<name_of_font>/*.ttf',
-  //'./node_modules/google-fonts/ofl/<name_of_font>/*.ttf',
   './node_modules/font-awesome/fonts/*'
 ]
 
